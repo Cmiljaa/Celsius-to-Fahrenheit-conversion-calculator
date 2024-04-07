@@ -27,7 +27,8 @@ body {
 }
 
 .converter input{
-    margin: 15px 0px;
+    margin-top: 10px;
+    margin-bottom: 25px;
 }
 
 .converter p{
@@ -36,7 +37,7 @@ body {
 }
 
 .converter .buttons{
-    position: center;
+    text-align: center;
 }
 
 .converter button{
@@ -48,6 +49,7 @@ body {
     border: 1px solid rgb(25, 52, 77);
     color: rgb(167, 217, 255);
     transition: 0.5s;
+    margin: 0px 15px;
 }
 
 .converter button:hover{
