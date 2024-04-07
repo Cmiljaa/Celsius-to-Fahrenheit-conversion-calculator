@@ -2,13 +2,56 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-size: 25px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-body{
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: url(img/background.jpg);
     background-size: cover;
 }
 
-.container{
-    background-color: white;
+.container {
+    background: rgb(30,218,221);
+    background: linear-gradient(0deg, rgba(30,218,221,1) 0%, rgba(45,110,253,1) 100%);
+    padding: 30px 110px 130px;
+    margin-top: 200px;
+    border-radius: 20px;
+}
+
+.container .converter{
+    margin-top: 20px;
+}
+
+.converter input{
+    margin: 15px 0px;
+}
+
+.converter p{
+    color: rgb(13, 26, 38);
+    font-size: 27px;
+}
+
+.converter .buttons{
+    position: center;
+}
+
+.converter button{
+    display: inline-block;
+    justify-content: center;
+    padding: 5px;
+    font-size: 22px;
+    background: rgb(25, 52, 77);
+    border: 1px solid rgb(25, 52, 77);
+    color: rgb(167, 217, 255);
+    transition: 0.5s;
+}
+
+.converter button:hover{
+    color: rgb(25, 52, 77);
+    background-color: rgb(167, 217, 255);
+    transition-duration: 0.5s;
 }
