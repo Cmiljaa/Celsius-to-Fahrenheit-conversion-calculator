@@ -51,4 +51,4 @@ const calculatef = () =>{
 
 swap.addEventListener('click',() => reverse());
 
-calculate.addEventListener('click', () => calculatef())
+calculate.addEventListener('click', () => calculatef());

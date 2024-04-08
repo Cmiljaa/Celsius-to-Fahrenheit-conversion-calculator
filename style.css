@@ -49,7 +49,7 @@ body {
     border: 1px solid rgb(25, 52, 77);
     color: rgb(167, 217, 255);
     transition: 0.5s;
-    margin: 0px 15px;
+    margin: 5px 15px;
 }
 
 .converter button:hover{
