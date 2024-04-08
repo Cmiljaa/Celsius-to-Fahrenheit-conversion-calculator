@@ -23,16 +23,16 @@ body {
 }
 
 .container .converter{
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .converter input{
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 25px;
 }
 
 .converter p{
-    color: rgb(13, 26, 38);
+    color: rgb(240, 253, 255);
     font-size: 27px;
 }
 
