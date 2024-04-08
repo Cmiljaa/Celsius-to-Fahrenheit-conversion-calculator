@@ -6,7 +6,7 @@ let calculate = document.querySelector('.container .converter #calculate');
 const reversef = () =>{
     p.innerHTML = 'Fahrenheit to Celsius (ºF to ºC) conversion calculator';
     input.setAttribute('placeholder', '°F');
-    document.querySelector('.result').innerHTML = '1°F = 0.55556°C';
+    document.querySelector('.result').innerHTML = '1°F = 0.556°C';
 }
 
 const reversec = () =>{
