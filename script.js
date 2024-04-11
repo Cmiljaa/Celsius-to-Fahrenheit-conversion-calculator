@@ -1,32 +1,43 @@
 class TemperatureConverter{
+
+    //constructor dom manipulation
+
     constructor() {
         this.p = document.querySelector('.container .converter p');
         this.input = document.querySelector('.container .converter input');
         this.swap = document.querySelector('.container .converter #swap');
         this.calculate = document.querySelector('.container .converter #calculate');
-        this.initialization();
+        this.creatingresult();
         this.eventListeners();
     }
 
-    initialization = () =>{
+    //creating result paragraph
+
+    creatingresult = () =>{
         let parent = document.querySelector('.container');
         this.np = document.createElement('p');
         this.np.innerHTML = '1°C = 33.800°F';
         parent.appendChild(this.np);
     }
 
+    //fahrenheit to celsius
+
     reversef = () =>{
         this.p.innerHTML = 'Fahrenheit to Celsius (ºF to ºC) conversion calculator';
         this.input.setAttribute('placeholder', '°F');
         this.np.innerHTML = '1°F = 0.556°C';
     }
-    
+
+    //celsius to fahrenheit
+
     reversec = () =>{
         this.p.innerHTML = 'Celsius to Fahrenheit (ºC to ºF) conversion calculator';
         this.input.setAttribute('placeholder', '°C');
         this.np.innerHTML = '1°C = 33.800°F';
     }
     
+    //changing method
+
     reverse = () => {
         if(this.input.getAttribute('placeholder') === '°C')
             this.reversef();
@@ -34,6 +45,8 @@ class TemperatureConverter{
             this.reversec();
         this.input.value = '';
     }
+
+    //calculate method
 
     calculatef = () =>{
         if(this.input.value === '')
@@ -52,6 +65,8 @@ class TemperatureConverter{
             }
         }
     }
+
+    //adding eventlisteners to buttons
 
     eventListeners() {
         swap.addEventListener('click',() => this.reverse());
