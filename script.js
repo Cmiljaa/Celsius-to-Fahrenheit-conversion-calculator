@@ -11,7 +11,6 @@ class TemperatureConverter{
     initialization = () =>{
         let parent = document.querySelector('.container');
         this.np = document.createElement('p');
-        this.np.setAttribute('class','result');
         this.np.innerHTML = '1°C = 33.800°F';
         parent.appendChild(this.np);
     }
@@ -19,17 +18,17 @@ class TemperatureConverter{
     reversef = () =>{
         this.p.innerHTML = 'Fahrenheit to Celsius (ºF to ºC) conversion calculator';
         this.input.setAttribute('placeholder', '°F');
-        document.querySelector('.result').innerHTML = '1°F = 0.556°C';
+        this.np.innerHTML = '1°F = 0.556°C';
     }
     
     reversec = () =>{
         this.p.innerHTML = 'Celsius to Fahrenheit (ºC to ºF) conversion calculator';
         this.input.setAttribute('placeholder', '°C');
-        document.querySelector('.result').innerHTML = '1°C = 33.800°F';
+        this.np.innerHTML = '1°C = 33.800°F';
     }
     
     reverse = () => {
-        if(input.getAttribute('placeholder') === '°C')
+        if(this.input.getAttribute('placeholder') === '°C')
             this.reversef();
         else
             this.reversec();
@@ -41,15 +40,15 @@ class TemperatureConverter{
             alert('Your input is empty!');
         else{
             let value = parseFloat(this.input.value);
-            if(input.getAttribute('placeholder') === '°C')
+            if(this.input.getAttribute('placeholder') === '°C')
             {
                 let res = (value * 1.8) + 32;
-                document.querySelector('.result').innerHTML = `${input.value}°C = ${res.toFixed(3)}°F`
+                this.np.innerHTML = `${this.input.value}°C = ${res.toFixed(3)}°F`
             }
             else
             {
                 let res = (value - 32) / 1.8;
-                document.querySelector('.result').innerHTML = `${input.value}°F = ${res.toFixed(3)}°C`
+                this.np.innerHTML = `${this.input.value}°F = ${res.toFixed(3)}°C`
             }
         }
     }
